@@ -322,7 +322,7 @@ def _ifaces_to_net_config_data(ifaces):
         if data.get('method') == 'static':
             subnet['address'] = data['address']
 
-        for copy_key in ('netmask', 'gateway', 'broadcast'):
+        for copy_key in ('netmask', 'gateway', 'broadcast', 'mtu'):
             if copy_key in data:
                 subnet[copy_key] = data[copy_key]
 
